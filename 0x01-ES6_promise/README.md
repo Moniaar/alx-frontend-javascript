@@ -34,8 +34,20 @@ npm install --save-dev @testing-library/react
 ## Why does promises take so much time to get resolved?: 
 Promises themselves do not inherently take a long time to run; the time it takes for a promise to settle (either resolve or reject) depends on the operation it represents. Promises are simply a way to handle asynchronous operations in JavaScript, allowing you to write cleaner and more manageable asynchronous code.
 
-### Factors Affecting Promise Execution Time
+### Here are some factors that may affect Promise Execution Time
 Network Requests: If a promise is used to handle a network request (e.g., fetching data from an API), the time taken will depend on network latency and server response times.
 I/O Operations: Promises used for file system operations (like reading or writing files) will depend on the speed of the I/O operations.
 Heavy Computation: If the promise wraps a function that performs heavy computations, the time taken to complete the computation will affect the promise's resolution time.
 Timers: Promises can be used with setTimeout or setInterval to delay execution, making them wait intentionally.
+
+---
+
+What does it mean "for every resolution, log Got a response from the API to the console"?
+It means weather upon failing or successeding / resolve & rejecting , you should always show the user the text provided, hence "it should log "Got a response from the API" to the console".
+
+
+
+
+
+
+
